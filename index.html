@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Expense Tracker</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div id="app">
+        <div class="container">
+            <h1>Expense Tracker</h1>
+            <nav>
+                <ul class="menu">
+                    <li><a class="menuItems" href="#dashboard">Dashboard</a></li>
+                    <li><a class="menuItems" href="#expense-form">Add Expense</a></li>
+                    <li><a class="menuItems" href="#expense-list">Expense List</a></li>
+                </ul>
+            </nav>
+            <div id="dashboard" class="page">
+                <h2>Dashboard</h2>
+                <p>Total Expenses: <span id="total-expenses">$0.00</span></p>
+            </div>
+            <div id="expense-form" class="page">
+                <h2>Add Expense</h2>
+                <form id="add-expense-form">
+                    <div class="form-group">
+                        <label for="date">Date</label>
+                        <input type="date" id="date" name="date" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="category">Category</label>
+                        <input type="text" id="category" name="category" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="description">Description</label>
+                        <input type="text" id="description" name="description" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="amount">Amount</label>
+                        <input type="number" id="amount" name="amount" min="0" step="0.01" required>
+                    </div>
+                    <button type="submit">Add Expense</button>
+                </form>
+            </div>
+            <div id="expense-list" class="page">
+                <h2>Expense List</h2>
+                <ul id="expenses"></ul>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
